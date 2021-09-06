@@ -1,0 +1,60 @@
+plugins {
+    id 'application'
+    id 'com.dua3.javafxgradle7plugin' version '0.0.9'
+    id 'org.beryx.jlink' version '2.24.1'
+}
+
+application {
+    mainModule = 'TaskTimer'
+    mainClass = 'HuimangTech.App'
+    applicationName = 'TaskTimer'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+// https://mvnrepository.com/artifact/com.jfoenix/jfoenix
+    implementation 'com.jfoenix:jfoenix:9.0.10'
+}
+
+javafx {
+    version = "16"
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ["src/main/java"]
+            includes = ["**/*.fxml", "**/*.css", "**/*.png", "**/*.properties"]
+        }
+    }
+}
+
+jlink {
+
+    options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
+    launcher {
+        name = 'TaskTimer'
+        jvmArgs = ['-Dlog4j.configurationFile=./log4j2.xml']
+    }
+    jpackage {
+        imageOptions = ["--win-console"] // <--- for Debug
+        imageName = 'TaskTimer'
+        skipInstaller = true
+        installerName = 'TaskTimer'
+        installerType = 'pkg'
+    }
+    forceMerge('log4j-api')
+
+}
+
+
+
+
+
+
+
+
