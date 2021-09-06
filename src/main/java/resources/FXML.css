@@ -1,0 +1,96 @@
+@font-face {
+
+}
+
+.parent {
+    -fx-background-color: #fff;
+}
+
+.sidebar {
+    -fx-background-color: #325288;
+}
+
+.HomeLbl {
+    -fx-font-family: 'Adobe Devanagari';
+}
+
+.jfxButton {
+    -fx-background-color: #325288;
+    -fx-text-fill: #FFF;
+}
+
+.jfxButton:hover {
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #325288;
+    -fx-border-color: #325288;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-border-style: solid;
+}
+
+.jfxButton:focused:hover {
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #325288;
+    -fx-border-color: #325288;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-border-style: solid;
+}
+
+
+.closeBtn {
+    -fx-background-color: #325288;
+}
+
+.closeBtn:hover {
+    -fx-background-color: #f17b7b;
+}
+
+.aboutUsBtn {
+    -fx-fill: #FFF;
+}
+
+.aboutUsBtn:hover {
+    -fx-fill: #f1c64e;
+}
+
+.backBtn {
+}
+
+.backBtn:hover {
+    -fx-background-color: #21365b;
+}
+
+.homeUI {
+    -fx-background-color: white;
+    -fx-border-color: #325288;
+    -fx-border-width: 5px 5px 5px 5px
+}
+
+.choice-box {
+    -fx-fill: #f1c64e;
+    -fx-text-fill: #f1c64e;
+    -fx-color-label-visible: #f1c64e;
+    -fx-font-size: 28px;
+    -fx-font-family: "Times New Roman";
+    -fx-background-color: -fx-text-box-border, -fx-background, #fff;
+    -fx-background-insets: 0, 0 0 0 0;
+    -fx-background-radius: 0;
+}
+
+.choice-box:focused {
+    -fx-text-fill: #f1c64e;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-background-radius: 0;
+    -fx-background-color: -fx-focus-color, -fx-background;
+}
+
+.choice-box:hover {
+    -fx-text-fill: #f1c64e;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-background-radius: 0;
+    -fx-background-color: -fx-focus-color, -fx-background;
+}
+
