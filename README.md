@@ -1,4 +1,4 @@
-[![The Unlicens license](https://img.shields.io/badge/License-BSD--2-informational.svg)](LICENSE)
+[![The Unlicens](https://img.shields.io/badge/Licence-The%20Unlicens-blue)](LICENSE)
 
 
 # TaskTimer
