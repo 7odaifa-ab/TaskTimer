@@ -1,5 +1,5 @@
-<h1 align="center">TaskTimer <a href="https://github.com/7odaifa-ab/TaskTimer"><img src="https://jitpack.io/v/javiersantos/PiracyChecker.svg"></a></h1>
-<h4 align="center">Android Library</h4>
+<h1 align="center">TaskTimer <a href="https://github.com/7odaifa-ab/TaskTimer"></a></h1>
+<h4 align="center">Library</h4>
 
 <p align="center">
   <a target="_blank" href="https://android-arsenal.com/api?level=14"><img src="https://img.shields.io/badge/API-14%2B-orange.svg"></a>
