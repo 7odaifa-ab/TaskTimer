@@ -1,10 +1,8 @@
 <h1 align="center">TaskTimer <a href="https://github.com/7odaifa-ab/TaskTimer"></a></h1>
 <p align="center">
- <a [![Download](https://img.shields.io/badge/Download-V1.0-brightgreen)](https://github.com/7odaifa-ab/TaskTimer/releases/download/Release/TaskTimer_Setup.exe)></a>
- <a [![releases](https://img.shields.io/badge/Releases-Versions%20List-lightgrey)](https://github.com/7odaifa-ab/TaskTimer/releases)></a>
- <a [![Java](https://img.shields.io/badge/Java-16.0.2-orange?logo=java)](https://www.oracle.com/java/technologies/javase/16-0-2-relnotes.html)></a>
- <a [![Gradle](https://img.shields.io/badge/Gradle-7.2%2B-green)](https://gradle.org/)></a>
- <a [![The Unlicens](https://img.shields.io/badge/Licence-The%20Unlicens-blue)](LICENSE)></a>
+  <a target="_blank" href="https://github.com/7odaifa-ab/TaskTimer/releases/download/Release/TaskTimer_Setup.exe"><img src="https://img.shields.io/badge/Download-V1.0-brightgreen"></a>
+  <a target="_blank" href="https://github.com/7odaifa-ab/TaskTimer/releases"><img src="https://img.shields.io/badge/Releases-Versions%20List-lightgrey"></a>
+  <a target="_blank" href="https://www.oracle.com/java/technologies/javase/16-0-2-relnotes.html"><img src="https://img.shields.io/badge/Java-16.0.2-orange?logo=java"></a>
 </p>
 
 <p align="center">An accurate timer utility for running periodic tasks/commands on the given interval Hours, Minutes, Seconds.</p>
@@ -13,8 +11,11 @@
   Owner & Author: <a target="_blank" href="https://github.com/7odaifa-ab">Hudaifa Abdullah</a><br>
 </p></i>
 
-
-
+[![Download](https://img.shields.io/badge/Download-V1.0-brightgreen)](https://github.com/7odaifa-ab/TaskTimer/releases/download/Release/TaskTimer_Setup.exe)
+[![releases](https://img.shields.io/badge/Releases-Versions%20List-lightgrey)](https://github.com/7odaifa-ab/TaskTimer/releases)
+[![Java](https://img.shields.io/badge/Java-16.0.2-orange?logo=java)](https://www.oracle.com/java/technologies/javase/16-0-2-relnotes.html)
+[![Gradle](https://img.shields.io/badge/Gradle-7.2%2B-green)](https://gradle.org/)
+[![The Unlicens](https://img.shields.io/badge/Licence-The%20Unlicens-blue)](LICENSE)
 
 
 
