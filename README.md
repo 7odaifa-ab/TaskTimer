@@ -13,8 +13,10 @@
   Owner & Author: <a target="_blank" href="https://github.com/7odaifa-ab">Hudaifa Abdullah</a><br>
 </p></i>
 
-# TaskTimer
-it's a Timer that can send a Command to CMD on the end of a given time interval e.g. Shutdown the Computer
+# Gitrting Started
+Task Tiner is a Timer that can send a Command to CMD on the end of a given time interval e.g. Shutdown the Computer
+
+it's a Java project uses a ```jdk-16.0.2```, and ```Gradle``` Bulide, along with ```JavaFx 16``` for it's Interface
 
 ## Usage
 
