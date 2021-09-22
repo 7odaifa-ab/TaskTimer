@@ -18,6 +18,12 @@ Task Tiner is a Timer that can send a Command to CMD on the end of a given time 
 
 it's a Java project uses a ```jdk-16.0.2```, and ```Gradle``` Bulide, along with ```JavaFX 16``` for it's Interface
 
+## Coming Fetures
+* Enter a custom command
+* Multi-Langague support
+* new themes
+
+
 ## Usage
 
 ## How it works
