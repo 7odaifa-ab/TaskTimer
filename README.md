@@ -7,7 +7,7 @@
   <a target="_blank" href="LICENSE"><img src="https://img.shields.io/badge/Licence-The%20Unlicens-blue"></a>
 </p>
 
-<p align="center">An accurate timer utility for running periodic tasks/commands on the given interval Hours, Minutes, Seconds.</p>
+<p align="center">An accurate timer utility for running tasks/commands on the given interval Hours, Minutes, Seconds.</p>
 
 <i><p align="center">
   Owner & Author: <a target="_blank" href="https://github.com/7odaifa-ab">Hudaifa Abdullah</a><br>
