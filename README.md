@@ -1,4 +1,4 @@
-[![license](https://unlicense.org)](LICENSE)
+[![The Unlicense license](https://unlicense.org)](LICENSE)
 
 
 # TaskTimer
