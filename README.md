@@ -14,7 +14,9 @@
 </p></i>
 
 # TaskTimer
-An accurate timer utility for running periodic tasks on the given interval ticks or dates.
+it's a Timer that can send a Command to CMD on the end of a given time interval e.g. Shutdown the Computer
 
-it's a Timer that can send a Command to CMD after the timer Finish e.g. Shutdown the Computer
+## Usage
+
+## How it works
 
