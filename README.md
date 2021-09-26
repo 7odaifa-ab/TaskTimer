@@ -1,4 +1,3 @@
-@@ -1,31 +0,0 @@
 <h1 align="center">TaskTimer <a href="https://github.com/7odaifa-ab/TaskTimer"></a></h1>
 <p align="center">
   <a target="_blank" href="https://github.com/7odaifa-ab/TaskTimer/releases/download/1.1/TaskTimer_Setup.exe"><img src="https://img.shields.io/badge/Download-V1.1-brightgreen"></a>
