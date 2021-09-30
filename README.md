@@ -24,7 +24,9 @@ it can send a Command to CMD on the end of a given time interval e.g. Shutdown t
 * Multi-Langague support
 * new themes
 
-
+## Downside to be Fixed
+* the Hibernation won't work unless it was Enabled by the system
+* the Sleep button will hibernate if Hibernation was Enabled by the system 
 ## Usage
 
 ## How it works
