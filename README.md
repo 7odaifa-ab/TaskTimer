@@ -14,7 +14,7 @@
 </p></i>
 
 # Gitrting Started
-Task Timer is a Java project uses a ```jdk-16.0.2```, ```Gradle``` Bulide, ```JavaFX 16``` for it's Interface, and along with IntelliJ IDEA
+Task Timer is a Java project uses a ```jdk-16.0.2```, ```JavaFX 16``` for it's Interface, and ```Gradle``` Bulide, along with IntelliJ IDEA
 
 it can send a Command to CMD on the end of a given time interval e.g. Shutdown the Computer
 
