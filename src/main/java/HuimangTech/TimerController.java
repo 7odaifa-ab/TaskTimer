@@ -25,7 +25,7 @@ public class TimerController implements Initializable {
     private int STARTTIME = 0;
     private Timeline timeline;
     private final IntegerProperty timeSeconds = new SimpleIntegerProperty(STARTTIME);
-    ChangeListener<String> listener = ((observable, oldValue, newValue) -> ResetTimer());
+    private ChangeListener<String> listener = ((observable, oldValue, newValue) -> ResetTimer());
 
 
     @FXML
