@@ -9,12 +9,20 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.util.Duration;
+
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.URL;
+import java.nio.charset.Charset;
 import java.util.ResourceBundle;
+
 import com.jfoenix.controls.JFXButton;
 
 
@@ -130,22 +138,6 @@ public class TimerController implements Initializable {
 
     }
 
-    void runCMDCommand() {
-
-        timeline.setOnFinished(event1 -> {
-            try {
-                App.setRoot("Timer");
-                if (MainUIController.getTaskName().equals("Sleep") || MainUIController.getTaskName().equals("Hibernate")) {
-                    App.runCMDCommand(extraCommand);
-                }
-                App.runCMDCommand(command);
-                CLOSE_APP();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
-    }
-
     void ResetTimer() {
         timeline = null;
     }
@@ -203,6 +195,31 @@ public class TimerController implements Initializable {
         SecTxtField.textProperty().removeListener(listener);
     }
 
+    void runCMDCommand() {
+
+        timeline.setOnFinished(event1 -> {
+            try {
+                App.setRoot("Timer"); // reset timer
+                /*if (MainUIController.getTaskName().equals("Sleep") || MainUIController.getTaskName().equals("Hibernate")) {
+                    App.runCMDCommand(extraCommand);
+                }*/
+
+                ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", command);
+                builder.redirectErrorStream(true);
+                builder.start();
+                CLOSE_APP();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+    }
+
+    // TODO: 9/15/2022 remove
+    public void runCMDCommand(String command) throws IOException {
+        ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", command);
+        builder.redirectErrorStream(true);
+        builder.start();
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -222,14 +239,13 @@ public class TimerController implements Initializable {
             }
             case "Hibernate" -> {
                 taskLbl.setText(resourceBundle.getString("tskHibernateLbl"));
-                extraCommand = "powercfg -h on";
                 command = "start shutdown /h";
             }
             case "Sleep" -> {
                 taskLbl.setText(resourceBundle.getString("tskSleepLbl"));
-                extraCommand = "powercfg -h off";
                 command = "rundll32.exe powrprof.dll, SetSuspendState Sleep";
             }
         }
     }
+
 }

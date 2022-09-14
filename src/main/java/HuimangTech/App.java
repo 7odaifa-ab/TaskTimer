@@ -6,7 +6,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.concurrent.atomic.AtomicReference;
@@ -34,7 +37,7 @@ public class App extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        ResourceBundle bundle = ResourceBundle.getBundle("resources.bundles.TaskTimer", new Locale("en","US"));
+        ResourceBundle bundle = ResourceBundle.getBundle("resources.bundles.TaskTimer", new Locale("en", "US"));
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/resources/" + fxml + ".fxml"), bundle);
         return fxmlLoader.load();
     }
@@ -59,15 +62,9 @@ public class App extends Application {
         });
     }
 
-
-    static public void runCMDCommand(String command) throws IOException {
-        ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", command);
-        builder.redirectErrorStream(true);
-        builder.start();
-    }
-
     public static void main(String[] args) {
         launch();
     }
+
 
 }
