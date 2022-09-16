@@ -5,14 +5,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MainUIController implements Initializable {
+    String enablerPATH = "C:\\Program Files (x86)\\TaskTimer\\ExternalCommands\\TaskTimer-HibernationTask.exe";
 
     public MainUIController() {
     }
@@ -67,9 +66,10 @@ public class MainUIController implements Initializable {
 
     void sleepSwitch() throws IOException {
         if (isHibernationOn()) {
-            String message = "Hibernation is ON and must be turned OFF to use the sleep mode, continue to turn it off ?";
+            String message = "Hibernation is ENABLED and must be DISABLED to use the Sleep Timer, continue to Disable it?\n(Require admin permission)";
             if (showAlert(message)) {
-                //turn off hibernation in admin mode
+                ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", enablerPATH, "disable");
+                builder.start();
             }
         } else {
             App.setRoot("Timer");
@@ -78,9 +78,10 @@ public class MainUIController implements Initializable {
 
     void HibernationSwitch() throws IOException {
         if (!isHibernationOn()) {
-            String message = "Hibernation is OFF and must be turned ON to use this mode, continue to turn it on ?";
+            String message = "Hibernation is DISABLED and must be ENABLED to use the Hibernation Timer, continue to Enable it?\n(Require admin permission)";
             if (showAlert(message)) {
-                //turn on hibernation in admin mode
+                ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", enablerPATH, "enable");
+                builder.start();
             }
         } else {
             App.setRoot("Timer");
