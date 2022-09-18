@@ -6,37 +6,49 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 
-import java.io.*;
-import java.lang.reflect.InvocationTargetException;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.URL;
-import java.util.Map;
-import java.util.Properties;
 import java.util.ResourceBundle;
 
 public class MainUIController implements Initializable {
+    static String TaskName = "";
     String enablerPATH = System.getenv("APPDATA") + "\\TaskTimer\\ExternalCommands\\TaskTimer-HibernationTask.exe";
     ResourceBundle TaskTimer_lang_bundle = ResourceBundle.getBundle("resources/bundles/TaskTimer_en_US");
 
+
     public MainUIController() {
     }
-
 
     public static String getTaskName() {
         return TaskName;
     }
 
-
-    static String TaskName = "";
-
     @FXML
     void CLOSE_APP() {
         App.primaryStage.close();
         Platform.exit();
-        System.exit(0);    }
+        System.exit(0);
+    }
 
     @FXML
     void MINIMIZE_APP() {
         App.primaryStage.setIconified(true);
+    }
+
+    @FXML
+    void ABOUT() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION
+                , "For Contact Follow Me on Social Media" + "\n\n" +
+                "Github: @7odaifa_ab" + "\n" +
+                "Twitter: @7odaifa_ab" + "\n" +
+                "Instagram: @7odaifa_ab" + "\n"
+                , ButtonType.OK);
+        alert.setTitle("About");
+        alert.setHeaderText("Made By Hudaifa Abdullah ツ");
+        alert.showAndWait();
     }
 
     @FXML
@@ -104,11 +116,7 @@ public class MainUIController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.NONE, message, ButtonType.YES, ButtonType.CANCEL);
         alert.showAndWait();
 
-        if (alert.getResult() == ButtonType.YES) {
-            return true;
-        } else {
-            return false;
-        }
+        return alert.getResult() == ButtonType.YES;
     }
 
     Boolean isHibernationOn() {

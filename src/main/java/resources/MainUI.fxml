@@ -69,6 +69,15 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
+                  <JFXButton fx:id="about" focusTraversable="false" onMouseClicked="#ABOUT" prefHeight="35.0" prefWidth="50.0" styleClass="backBtn">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" styleClass="minus">
+                           <image>
+                              <Image url="@Images/information-button.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
                </children>
             </Pane>
          </top>

@@ -34,4 +34,4 @@ else
     Console.WriteLine("No arguments");
 }
 
-Console.ReadLine();
+//Console.ReadLine();

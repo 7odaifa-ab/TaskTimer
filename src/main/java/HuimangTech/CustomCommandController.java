@@ -21,9 +21,9 @@ import java.util.ResourceBundle;
 
 public class CustomCommandController implements Initializable {
     private int STARTTIME = 0;
-    private Timeline timeline;
     private final IntegerProperty timeSeconds = new SimpleIntegerProperty(STARTTIME);
-    private ChangeListener<String> listener = ((observable, oldValue, newValue) -> ResetTimer());
+    private Timeline timeline;
+    private final ChangeListener<String> listener = ((observable, oldValue, newValue) -> ResetTimer());
 
 
     @FXML
@@ -69,7 +69,8 @@ public class CustomCommandController implements Initializable {
     void CLOSE_APP() {
         App.primaryStage.close();
         Platform.exit();
-        System.exit(0);    }
+        System.exit(0);
+    }
 
     @FXML
     void BACK() throws IOException {
