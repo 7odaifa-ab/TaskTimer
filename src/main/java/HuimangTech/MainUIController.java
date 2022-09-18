@@ -8,12 +8,27 @@ import javafx.scene.control.ButtonType;
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
+import java.util.Map;
+import java.util.Properties;
 import java.util.ResourceBundle;
 
 public class MainUIController implements Initializable {
     String enablerPATH = "C:\\Program Files (x86)\\TaskTimer\\ExternalCommands\\TaskTimer-HibernationTask.exe";
-
+    ResourceBundle TaskTimer_lang_bundle = ResourceBundle.getBundle("resources/bundles/TaskTimer_en_US");
     public MainUIController() {
+        {
+           /* try {
+                ResourceBundle rb = ResourceBundle.getBundle("TaskTimer_en_US.properties");
+                //reader = new FileReader("resources/bundles/TaskTimer_en_US.properties");
+                TaskTimer_en_US = new Properties();
+                TaskTimer_en_US.load();
+
+            } catch (FileNotFoundException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }*/
+        }
     }
 
 
@@ -51,7 +66,6 @@ public class MainUIController implements Initializable {
     void switchToHibernate() throws IOException {
         TaskName = "Hibernate";
         HibernationSwitch();
-
     }
 
     @FXML
@@ -66,10 +80,11 @@ public class MainUIController implements Initializable {
 
     void sleepSwitch() throws IOException {
         if (isHibernationOn()) {
-            String message = "Hibernation is ENABLED and must be DISABLED to use the Sleep Timer, continue to Disable it?\n(Require admin permission)";
+            String message = TaskTimer_lang_bundle.getString("sleepWarning");
             if (showAlert(message)) {
                 ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", enablerPATH, "disable");
                 builder.start();
+                App.setRoot("Timer");
             }
         } else {
             App.setRoot("Timer");
@@ -78,10 +93,11 @@ public class MainUIController implements Initializable {
 
     void HibernationSwitch() throws IOException {
         if (!isHibernationOn()) {
-            String message = "Hibernation is DISABLED and must be ENABLED to use the Hibernation Timer, continue to Enable it?\n(Require admin permission)";
+            String message = TaskTimer_lang_bundle.getString("hibernationWarning");
             if (showAlert(message)) {
                 ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", enablerPATH, "enable");
                 builder.start();
+                App.setRoot("Timer");
             }
         } else {
             App.setRoot("Timer");
@@ -89,7 +105,7 @@ public class MainUIController implements Initializable {
     }
 
     private boolean showAlert(String message) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION, message, ButtonType.YES, ButtonType.CANCEL);
+        Alert alert = new Alert(Alert.AlertType.NONE, message, ButtonType.YES, ButtonType.CANCEL);
         alert.showAndWait();
 
         if (alert.getResult() == ButtonType.YES) {
