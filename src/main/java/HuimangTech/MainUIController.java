@@ -1,5 +1,6 @@
 package HuimangTech;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -30,8 +31,8 @@ public class MainUIController implements Initializable {
     @FXML
     void CLOSE_APP() {
         App.primaryStage.close();
-        System.exit(0);
-    }
+        Platform.exit();
+        System.exit(0);    }
 
     @FXML
     void MINIMIZE_APP() {
@@ -61,6 +62,13 @@ public class MainUIController implements Initializable {
         TaskName = "Sleep";
         sleepSwitch();
     }
+
+    @FXML
+    void switchToCommand() throws IOException {
+        TaskName = "Custom Command";
+        App.setRoot("CustomCommand");
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

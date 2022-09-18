@@ -47,6 +47,9 @@
 .closeBtn:hover {
     -fx-background-color: #f17b7b;
 }
+.minus:focused{
+    -fx-background-color: #325288;
+}
 
 .aboutUsBtn {
     -fx-fill: #FFF;
@@ -63,34 +66,13 @@
     -fx-background-color: #21365b;
 }
 
-.homeUI {
-    -fx-background-color: white;
-    -fx-border-color: #325288;
-    -fx-border-width: 5px 5px 5px 5px
-}
 
-.choice-box {
-    -fx-fill: #f1c64e;
-    -fx-text-fill: #f1c64e;
-    -fx-color-label-visible: #f1c64e;
-    -fx-font-size: 28px;
-    -fx-font-family: "Times New Roman";
-    -fx-background-color: -fx-text-box-border, -fx-background, #fff;
-    -fx-background-insets: 0, 0 0 0 0;
-    -fx-background-radius: 0;
-}
-
-.choice-box:focused {
-    -fx-text-fill: #f1c64e;
+.editableText-field {
+    -fx-background-color: -fx-text-box-border, -fx-background, #fcfdff;
     -fx-background-insets: 0, 0 0 1 0;
     -fx-background-radius: 0;
-    -fx-background-color: -fx-focus-color, -fx-background;
 }
 
-.choice-box:hover {
-    -fx-text-fill: #f1c64e;
-    -fx-background-insets: 0, 0 0 1 0;
-    -fx-background-radius: 0;
+.editableText-field:focused {
     -fx-background-color: -fx-focus-color, -fx-background;
 }
-

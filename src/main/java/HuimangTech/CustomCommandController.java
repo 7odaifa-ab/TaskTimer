@@ -1,5 +1,6 @@
 package HuimangTech;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -18,12 +19,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import com.jfoenix.controls.JFXButton;
-
-
-public class TimerController implements Initializable {
-
-    private String command;
+public class CustomCommandController implements Initializable {
     private int STARTTIME = 0;
     private Timeline timeline;
     private final IntegerProperty timeSeconds = new SimpleIntegerProperty(STARTTIME);
@@ -39,6 +35,8 @@ public class TimerController implements Initializable {
     @FXML
     private TextField HoursTxtField;
     @FXML
+    private TextField CommandTxtField;
+    @FXML
     private TextField MinTxtField;
     @FXML
     private TextField SecTxtField;
@@ -48,7 +46,7 @@ public class TimerController implements Initializable {
     @FXML
     void StartBtn() {
         if (timeline != null) {
-            checkTimerStatus();
+            checkTimerStatus(); //pause if it was running and vise versa
             return;
         }
 
@@ -57,22 +55,21 @@ public class TimerController implements Initializable {
         resetBtn.setVisible(true);
         pauseBtn.setVisible(true);
         bindTimeToTextField();
-        runCMDCommand();
+        setOnFishedCommand();
 
     }
 
     @FXML
     void resetBtn() throws IOException {
         ResetTimer();
-        App.setRoot("Timer");
+        App.setRoot("CustomCommand");
     }
 
     @FXML
     void CLOSE_APP() {
         App.primaryStage.close();
         Platform.exit();
-        System.exit(0);
-    }
+        System.exit(0);    }
 
     @FXML
     void BACK() throws IOException {
@@ -127,7 +124,6 @@ public class TimerController implements Initializable {
                 new KeyFrame(Duration.seconds(STARTTIME + 1),
                         new KeyValue(timeSeconds, 0)));
         timeline.playFromStart();
-
     }
 
     void ResetTimer() {
@@ -138,7 +134,7 @@ public class TimerController implements Initializable {
         removeChangeListener();
         removeStyleClass();
 
-        // Bind the Timer TextFields text property to the timeSeconds property
+        // Bind the Timer TextFields text property to the Timer property
         HoursTxtField.textProperty().bind(timeSeconds.divide(3600).asString());
         MinTxtField.textProperty().bind(timeSeconds.divide(60).subtract(timeSeconds.divide(3600).multiply(60)).asString());
         SecTxtField.textProperty().bind(timeSeconds.subtract(timeSeconds.divide(60).multiply(60)).asString());
@@ -158,35 +154,40 @@ public class TimerController implements Initializable {
     }
 
     void addChangeListener() {
+        //allow to change when paused
         HoursTxtField.textProperty().addListener(listener);
         MinTxtField.textProperty().addListener(listener);
         SecTxtField.textProperty().addListener(listener);
+        CommandTxtField.textProperty().addListener(listener);
     }
 
     void removeStyleClass() {
         HoursTxtField.getStyleClass().clear();
         MinTxtField.getStyleClass().clear();
         SecTxtField.getStyleClass().clear();
+        CommandTxtField.getStyleClass().clear();
     }
 
     void RestoreStyleClass() {
         HoursTxtField.getStyleClass().add("editableText-field");
         MinTxtField.getStyleClass().add("editableText-field");
         SecTxtField.getStyleClass().add("editableText-field");
+        CommandTxtField.getStyleClass().add("editableText-field");
     }
 
     void removeChangeListener() {
+        //remove due to conflict of timer updating count as change
         HoursTxtField.textProperty().removeListener(listener);
         MinTxtField.textProperty().removeListener(listener);
         SecTxtField.textProperty().removeListener(listener);
+        CommandTxtField.textProperty().removeListener(listener);
     }
 
-    void runCMDCommand() {
-
-        timeline.setOnFinished(event1 -> {
+    void setOnFishedCommand() {
+        timeline.setOnFinished(event -> {
             try {
                 App.setRoot("Timer"); // reset timer
-                ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", command);
+                ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", CommandTxtField.getText()); //get command
                 builder.redirectErrorStream(true);
                 builder.start();
                 CLOSE_APP();
@@ -196,31 +197,15 @@ public class TimerController implements Initializable {
         });
     }
 
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         StartBtn.disableProperty().bind(Bindings.isEmpty(HoursTxtField.textProperty())
                 .and(Bindings.isEmpty(MinTxtField.textProperty()))
-                .and(Bindings.isEmpty(SecTxtField.textProperty())));
+                .and(Bindings.isEmpty(SecTxtField.textProperty()))
+                .or(Bindings.isEmpty(CommandTxtField.textProperty())));
 
-
-        switch (MainUIController.getTaskName()) {
-            case "ShutDown" -> {
-                taskLbl.setText(resourceBundle.getString("tskShutDownLbl"));
-                command = "start shutdown /s";
-            }
-            case "Restart" -> {
-                taskLbl.setText(resourceBundle.getString("tskRestartLbl"));
-                command = "start shutdown /r";
-            }
-            case "Hibernate" -> {
-                taskLbl.setText(resourceBundle.getString("tskHibernateLbl"));
-                command = "start shutdown /h";
-            }
-            case "Sleep" -> {
-                taskLbl.setText(resourceBundle.getString("tskSleepLbl"));
-                command = "rundll32.exe powrprof.dll, SetSuspendState Sleep";
-            }
-        }
+        taskLbl.setText(resourceBundle.getString("tskCommandLbl"));
     }
 
 }

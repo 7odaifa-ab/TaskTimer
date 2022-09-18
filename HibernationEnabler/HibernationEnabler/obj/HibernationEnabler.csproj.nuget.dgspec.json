@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\loffy\\source\\repos\\HibernationEnabler\\HibernationEnabler\\HibernationEnabler.csproj": {}
+    "F:\\Users\\loffy\\Documents\\GitHub\\TaskTimer\\HibernationEnabler\\HibernationEnabler\\HibernationEnabler.csproj": {}
   },
   "projects": {
-    "C:\\Users\\loffy\\source\\repos\\HibernationEnabler\\HibernationEnabler\\HibernationEnabler.csproj": {
+    "F:\\Users\\loffy\\Documents\\GitHub\\TaskTimer\\HibernationEnabler\\HibernationEnabler\\HibernationEnabler.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\loffy\\source\\repos\\HibernationEnabler\\HibernationEnabler\\HibernationEnabler.csproj",
+        "projectUniqueName": "F:\\Users\\loffy\\Documents\\GitHub\\TaskTimer\\HibernationEnabler\\HibernationEnabler\\HibernationEnabler.csproj",
         "projectName": "HibernationEnabler",
-        "projectPath": "C:\\Users\\loffy\\source\\repos\\HibernationEnabler\\HibernationEnabler\\HibernationEnabler.csproj",
+        "projectPath": "F:\\Users\\loffy\\Documents\\GitHub\\TaskTimer\\HibernationEnabler\\HibernationEnabler\\HibernationEnabler.csproj",
         "packagesPath": "C:\\Users\\loffy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\loffy\\source\\repos\\HibernationEnabler\\HibernationEnabler\\obj\\",
+        "outputPath": "F:\\Users\\loffy\\Documents\\GitHub\\TaskTimer\\HibernationEnabler\\HibernationEnabler\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\loffy\\AppData\\Roaming\\NuGet\\NuGet.Config",

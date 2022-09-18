@@ -15,14 +15,14 @@
    <children>
       <BorderPane prefHeight="400.0" prefWidth="600.0">
          <center>
-            <Pane BorderPane.alignment="CENTER">
+            <Pane style="-fx-background-color: fcfdff;" BorderPane.alignment="CENTER">
                <children>
-                  <JFXButton fx:id="StartBtn" alignment="CENTER" defaultButton="true" layoutX="108.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#StartBtn" prefHeight="45.0" prefWidth="380.0" ripplerFill="#325288" styleClass="jfxButton" text="%Start">
+                  <JFXButton fx:id="StartBtn" alignment="CENTER" defaultButton="true" focusTraversable="false" layoutX="108.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#StartBtn" prefHeight="45.0" prefWidth="380.0" ripplerFill="#325288" styleClass="jfxButton" text="%Start">
                      <font>
                         <Font name="Consolas Bold" size="25.0" />
                      </font>
                   </JFXButton>
-                  <TextField fx:id="HoursTxtField" alignment="CENTER" layoutX="144.0" layoutY="138.0" prefHeight="36.0" prefWidth="76.0" promptText="%Hours" styleClass="accountText-field">
+                  <TextField fx:id="HoursTxtField" alignment="CENTER" focusTraversable="false" layoutX="120.0" layoutY="145.0" prefHeight="40.0" prefWidth="90.0" promptText="%Hours">
                      <padding>
                         <Insets bottom="0" left="0" right="0" top="0" />
                      </padding>
@@ -30,7 +30,7 @@
                         <Font size="25.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="MinTxtField" alignment="CENTER" layoutX="237.0" layoutY="138.0" prefHeight="36.0" prefWidth="82.0" promptText="%Minutes" styleClass="accountText-field">
+                  <TextField fx:id="MinTxtField" alignment="CENTER" focusTraversable="false" layoutX="235.0" layoutY="145.0" prefHeight="40.0" prefWidth="90.0" promptText="%Minutes">
                      <padding>
                         <Insets bottom="0" left="0" right="0" top="0" />
                      </padding>
@@ -38,7 +38,7 @@
                         <Font size="25.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="SecTxtField" alignment="CENTER" layoutX="339.0" layoutY="138.0" prefHeight="36.0" prefWidth="105.0" promptText="%Seconds" styleClass="accountText-field">
+                  <TextField fx:id="SecTxtField" alignment="CENTER" focusTraversable="false" layoutX="350.0" layoutY="145.0" prefHeight="40.0" prefWidth="105.0" promptText="%Seconds">
                      <padding>
                         <Insets bottom="0" left="0" right="0" top="0" />
                      </padding>
@@ -46,12 +46,12 @@
                         <Font size="25.0" />
                      </font>
                   </TextField>
-                  <Label alignment="CENTER" layoutX="221.0" layoutY="128.0" text=":" textFill="#325288">
+                  <Label alignment="CENTER" layoutX="215.0" layoutY="135.0" text=":" textFill="#325288">
                      <font>
                         <Font name="Times New Roman Bold" size="42.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" layoutX="321.0" layoutY="128.0" text=":" textFill="#325288">
+                  <Label alignment="CENTER" layoutX="330.0" layoutY="135.0" text=":" textFill="#325288">
                      <font>
                         <Font name="Times New Roman Bold" size="42.0" />
                      </font>
@@ -77,7 +77,7 @@
          <top>
             <Pane prefHeight="35.0" prefWidth="200.0" styleClass="sidebar" BorderPane.alignment="CENTER">
                <children>
-                  <JFXButton layoutX="550.0" onMouseClicked="#CLOSE_APP" prefHeight="35.0" prefWidth="50.0" styleClass="closeBtn">
+                  <JFXButton focusTraversable="false" layoutX="550.0" onMouseClicked="#CLOSE_APP" prefHeight="35.0" prefWidth="50.0" styleClass="closeBtn">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" styleClass="closeBtn">
                            <image>
@@ -86,7 +86,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton layoutX="500.0" onMouseClicked="#MINIMIZE_APP" prefHeight="35.0" prefWidth="50.0" styleClass="backBtn">
+                  <JFXButton focusTraversable="false" layoutX="500.0" onMouseClicked="#MINIMIZE_APP" prefHeight="35.0" prefWidth="50.0" styleClass="backBtn">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" styleClass="minus">
                            <image>
@@ -95,7 +95,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton onMouseClicked="#BACK" prefHeight="35.0" prefWidth="50.0" styleClass="backBtn">
+                  <JFXButton focusTraversable="false" onMouseClicked="#BACK" prefHeight="35.0" prefWidth="50.0" styleClass="backBtn">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#BACK" pickOnBounds="true" preserveRatio="true" styleClass="minus">
                            <image>
