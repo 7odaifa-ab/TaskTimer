@@ -17,13 +17,10 @@ repositories {
 dependencies {
 // https://mvnrepository.com/artifact/com.jfoenix/jfoenix
     implementation 'com.jfoenix:jfoenix:9.0.10'
-// https://mvnrepository.com/artifact/commons-io/commons-io
-    implementation 'commons-io:commons-io:2.11.0'
-
 }
 
 javafx {
-    version = "16"
+    version = "17"
     modules = ['javafx.controls', 'javafx.fxml']
 }
 
@@ -44,11 +41,13 @@ jlink {
         jvmArgs = ['-Dlog4j.configurationFile=./log4j2.xml']
     }
     jpackage {
-        imageOptions = ["--win-console"] // <--- for Debug
+        //imageOptions = ["--win-console"] // <--- for Debug
         imageName = 'TaskTimer'
         skipInstaller = true
         installerName = 'TaskTimer'
-        installerType = 'pkg'
+        installerType = 'exe'
+        imageOptions = ['--icon', 'src/main/java/resources/Images/TaskTimer.ico','--vendor', 'Trium']
+
     }
     forceMerge('log4j-api')
 

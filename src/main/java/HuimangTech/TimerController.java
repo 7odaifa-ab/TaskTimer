@@ -57,6 +57,7 @@ public class TimerController implements Initializable {
             checkTimerStatus();
             return;
         }
+
         StartTimer();
         StartBtn.setVisible(false);
         resetBtn.setVisible(true);

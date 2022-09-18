@@ -13,22 +13,10 @@ import java.util.Properties;
 import java.util.ResourceBundle;
 
 public class MainUIController implements Initializable {
-    String enablerPATH = "C:\\Program Files (x86)\\TaskTimer\\ExternalCommands\\TaskTimer-HibernationTask.exe";
+    String enablerPATH = System.getenv("APPDATA") + "\\TaskTimer\\ExternalCommands\\TaskTimer-HibernationTask.exe";
     ResourceBundle TaskTimer_lang_bundle = ResourceBundle.getBundle("resources/bundles/TaskTimer_en_US");
-    public MainUIController() {
-        {
-           /* try {
-                ResourceBundle rb = ResourceBundle.getBundle("TaskTimer_en_US.properties");
-                //reader = new FileReader("resources/bundles/TaskTimer_en_US.properties");
-                TaskTimer_en_US = new Properties();
-                TaskTimer_en_US.load();
 
-            } catch (FileNotFoundException e) {
-                throw new RuntimeException(e);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }*/
-        }
+    public MainUIController() {
     }
 
 
