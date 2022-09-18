@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IncludeSymbols>False</IncludeSymbols>
+    <PackageId>$(AssemblyName)</PackageId>
+    <Company>HuimangTech</Company>
+    <Authors>$(AssemblyName)ddddd</Authors>
+    <Product>TaskTimer</Product>
+    <AssemblyName>TaskTimer-HibernationTask</AssemblyName>
+  </PropertyGroup>
+
+</Project>

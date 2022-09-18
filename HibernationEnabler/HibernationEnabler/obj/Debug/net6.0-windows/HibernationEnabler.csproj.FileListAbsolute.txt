@@ -1,0 +1,15 @@
+C:\Users\loffy\source\repos\HibernationEnabler\HibernationEnabler\bin\Debug\net6.0-windows\HibernationEnabler.exe
+C:\Users\loffy\source\repos\HibernationEnabler\HibernationEnabler\bin\Debug\net6.0-windows\HibernationEnabler.deps.json
+C:\Users\loffy\source\repos\HibernationEnabler\HibernationEnabler\bin\Debug\net6.0-windows\HibernationEnabler.runtimeconfig.json
+C:\Users\loffy\source\repos\HibernationEnabler\HibernationEnabler\bin\Debug\net6.0-windows\HibernationEnabler.dll
+C:\Users\loffy\source\repos\HibernationEnabler\HibernationEnabler\bin\Debug\net6.0-windows\HibernationEnabler.pdb
+C:\Users\loffy\source\repos\HibernationEnabler\HibernationEnabler\obj\Debug\net6.0-windows\HibernationEnabler.csproj.AssemblyReference.cache
+C:\Users\loffy\source\repos\HibernationEnabler\HibernationEnabler\obj\Debug\net6.0-windows\HibernationEnabler.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\loffy\source\repos\HibernationEnabler\HibernationEnabler\obj\Debug\net6.0-windows\HibernationEnabler.AssemblyInfoInputs.cache
+C:\Users\loffy\source\repos\HibernationEnabler\HibernationEnabler\obj\Debug\net6.0-windows\HibernationEnabler.AssemblyInfo.cs
+C:\Users\loffy\source\repos\HibernationEnabler\HibernationEnabler\obj\Debug\net6.0-windows\HibernationEnabler.csproj.CoreCompileInputs.cache
+C:\Users\loffy\source\repos\HibernationEnabler\HibernationEnabler\obj\Debug\net6.0-windows\HibernationEnabler.dll
+C:\Users\loffy\source\repos\HibernationEnabler\HibernationEnabler\obj\Debug\net6.0-windows\refint\HibernationEnabler.dll
+C:\Users\loffy\source\repos\HibernationEnabler\HibernationEnabler\obj\Debug\net6.0-windows\HibernationEnabler.pdb
+C:\Users\loffy\source\repos\HibernationEnabler\HibernationEnabler\obj\Debug\net6.0-windows\HibernationEnabler.genruntimeconfig.cache
+C:\Users\loffy\source\repos\HibernationEnabler\HibernationEnabler\obj\Debug\net6.0-windows\ref\HibernationEnabler.dll
