@@ -33,7 +33,7 @@ Task Timer uses the tool ` HibernationEnabler ` to run an elevated command made 
 5. sync the project to download the dependencies
 6. open the Gradle menu and build the project 
 ```
-
+Or check <a href = "https://github.com/7odaifa-ab/TaskTimer/releases">releases</a> for a ready packed installer
 
 ## Usage
 it can send a Command to the Command prompt at the end of a given time interval e.g. Shutdown the Computer
