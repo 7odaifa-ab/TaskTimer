@@ -14,19 +14,24 @@
 </p></i>
 
 # Getting Started
-Task Timer is a Java project uses a ```jdk-18.0.2```, ```JavaFX 16``` for it's Interface, and ```Gradle``` Bulide, along with IntelliJ IDEA
+Task Timer is a Java project uses a ```jdk-18.0.2```, ```JavaFX 17``` for it's Interface, and ```Gradle``` build for packing, along with IntelliJ IDEA
 
 it can send a Command to CMD on the end of a given time interval e.g. Shutdown the Computer
 
+## Setup
+1- simply get the requrment ready
+2- download the source code
+3- unzip it to a folder
+4- chose to open exsting project from IntelliJ IDEA and navigate to the source code folder 
 
 ## Coming Fetures
-* Enter a custom command
 * Multi-Langague support
 * new themes
+* auto updateder module
 
 ## Downside to be Fixed
-* the Hibernation won't work unless it was Enabled by the system
-* the Sleep button will hibernate if Hibernation was Enabled by the system 
+* nothing known till now ^_^
+
 ## Usage
 
 ## How it works
