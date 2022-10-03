@@ -2,7 +2,7 @@
  </div>
 <h1 align="center">TaskTimer <a href="https://github.com/7odaifa-ab/TaskTimer"></a></h1>
 <p align="center">
-  <a target="_blank" href="https://github.com/7odaifa-ab/TaskTimer/releases/download/1.1/TaskTimer_Setup.exe"><img src="https://img.shields.io/badge/Download-V2.0-brightgreen"></a>
+  <a target="_blank" href="https://github.com/7odaifa-ab/TaskTimer/releases/download/2.0/TaskTimer_Setup.exe"><img src="https://img.shields.io/badge/Download-V2.0-brightgreen"></a>
   <a target="_blank" href="https://github.com/7odaifa-ab/TaskTimer/releases"><img src="https://img.shields.io/badge/Releases-Versions%20List-lightgrey"></a>
   <a target="_blank" href="https://www.oracle.com/java/technologies/javase/18-0-2-relnotes.html"><img src="https://img.shields.io/badge/Java-18.0.2-orange?logo=java"></a>
   <a target="_blank" href="https://gradle.org/"><img src="https://img.shields.io/badge/Gradle-7.5%2B-green"></a>
